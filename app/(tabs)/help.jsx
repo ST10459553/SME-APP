@@ -11,10 +11,9 @@ const help = () => {
   const {container,text}=styles
   return (
    <SafeAreaView style={container}>
-    <Header/>
     <Text style={text} >Where To Find Us</Text>
     <GridContainer imgLink={require('../../assets/images/office.jpg')} />
-    <Button btnText={'Get Directions'}/>
+    <Button btnText={'Get Directions'} link={'https://maps.app.goo.gl/EGtvxZU3suTZNAaW7'}/>
    </SafeAreaView>
   )
 }

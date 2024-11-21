@@ -1,19 +1,34 @@
-import { StyleSheet, Text, View,Image,SectionList,FlatList } from 'react-native'
+import { StyleSheet, Text, View,Image,SectionList,FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { sixMonthCourse } from '../data/sixMonthCourse'
 import {sixWeekCourse} from '../data/sixWeekCourse'
+import { useRouter } from 'expo-router'
 
 
 const SixWeekSectionList = (props) => {
     const {courseImg,container,courseName,coursePrice,sectionHeader,infoWrapper}=styles
     const {horizontal}=props
+    const router=useRouter()
     const renderItem=({item})=>(
         <View style={container}>
+            <TouchableOpacity onPress={()=>
+                router.push({
+                    pathname:'/Description',
+                    params:{
+                        name:item.name,
+                        price :item.price,
+                        image:item.image,
+                        description:item.description,
+                        perk:item.perk
+                    }
+                })
+            }>
             <Image style={courseImg} source={item.image}/>
             <View style={infoWrapper}>
             <Text style={courseName}>{item.name}</Text>
             <Text style={coursePrice}>R{item.price}</Text>   
             </View>
+            </TouchableOpacity>
         </View>
     )
 

@@ -6,22 +6,42 @@ export const sixMonthCourse = [
     {
         id: 1,
         name: 'Landscaping',
-        description: '',
+        description: 'To provide landscaping services for new and established gardens',
         image: Landscaping,
+        perk:'',
         price: 1500,
     },
     {
         id: 2,
         name: 'First Aid',
-        description: '',
+        description:`To provide first aid awareness and basic life support`,
         image: firstAid,
+        perk:`
+• Wounds and bleeding
+• Burns and fractures
+• Emergency scene management
+• Cardio-Pulmonary Resuscitation (CPR)
+• Respiratory distress e.g., Choking, blocked airway`,
         price: 1500,
     },
     {
         id: 3,
         name: 'Sewing',
-        description: '',
+        description: `dvdvib  ikbd odnl vodndoasvn `,
         image: sewing,
+        perk:`
+• Threading a sewing machine
+• Sewing buttons, zips, hems and seams
+• Alterations
+• Designing and sewing new garments`,
+        price: 1500,
+    },
+    {
+        id: 4,
+        name: 'Life SKills',
+        description: 'To provide skills to navigate basic life necessities',
+        image: sewing,
+        perk:'',
         price: 1500,
     },
 

@@ -22,7 +22,7 @@ export default function RootLayout() {
     )}}/>
     <Tabs.Screen name="help" options={{tabBarIcon:({focused})=>(
       <MaterialIcons name="help" size={24} color={focused?'#910B0B':'grey'}/>
-    )}}/>
+    ), headerShown:true,headerTitleAlign:'center',headerTitle:'Contact us'}}/>
   
 
     </Tabs>
