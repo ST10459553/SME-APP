@@ -69,7 +69,20 @@ const CartList = () => {
   const calculateTotal=(array)=>{
     let Itemtotal=0;
     array.forEach((item)=>{
-      Itemtotal+=parseInt(item.price)
+      
+      if(array.length==1){
+        Itemtotal+=parseInt(item.price)*1.15
+      }
+      if(array.length==2){
+        Itemtotal+=parseInt(item.price)*(1-5/100)*1.15
+      }
+      if(array.length==3){
+        Itemtotal+=parseInt(item.price)*(1-10/100)*1.15
+      }
+      if(array.length>3){
+        Itemtotal+=parseInt(item.price)*(1-15/100)*1.15
+      }
+      
     })
     
     return Itemtotal
@@ -110,7 +123,7 @@ const CartList = () => {
     </ScrollView>
     <View style={styles.priceWrapper}>
       <Pressable style={styles.buyBtn} ><Text style={styles.btnText} onPress={buy}>Buy</Text></Pressable>
-    <Text style={styles.totalPrice}>R{total}</Text></View>
+    <Text style={styles.totalPrice}>R{total.toFixed(1)}</Text></View>
     </View>
   );
 };

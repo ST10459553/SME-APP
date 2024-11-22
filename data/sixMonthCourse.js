@@ -1,6 +1,7 @@
 import Landscaping from '../assets/images/landscaping.jpg';
 import firstAid from '../assets/images/first-aid.jpg'
 import sewing from '../assets/images/sewing.jpg'
+import lifeskill from '../assets/images/lifeskill.jpg'
 
 export const sixMonthCourse = [
     {
@@ -8,7 +9,11 @@ export const sixMonthCourse = [
         name: 'Landscaping',
         description: 'To provide landscaping services for new and established gardens',
         image: Landscaping,
-        perk:'',
+        perk:`
+• Threading a sewing machine
+• Sewing buttons, zips, hems and seams
+• Alterations
+• Designing and sewing new garments`,
         price: 1500,
     },
     {
@@ -40,8 +45,12 @@ export const sixMonthCourse = [
         id: 4,
         name: 'Life SKills',
         description: 'To provide skills to navigate basic life necessities',
-        image: sewing,
-        perk:'',
+        image: lifeskill,
+        perk:`
+• Opening a bank account
+• Basic labour law (know your rights)
+• Basic reading and writing literacy 
+• Basic numeric literacy`,
         price: 1500,
     },
 
